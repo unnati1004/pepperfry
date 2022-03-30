@@ -44,11 +44,10 @@ export const Products = () => {
                         defaultValue="female"
                         name="radio-buttons-group"
                     >
-                        <FormControlLabel value="Relevance" control={<Radio />} label="Relevance" />
-                        <FormControlLabel value="Highest Priced First" control={<Radio />} label="Highest Priced First" />
-                        <FormControlLabel value="Lowest Priced First" control={<Radio />} label="Lowest Priced First" />
-                        <FormControlLabel value="Fastest Shipping" control={<Radio />} label="Fastest Shipping" />
-                        <FormControlLabel value="Newest" control={<Radio />} label="Newest" />
+                        <FormControlLabel value="Relevance" control={<Radio />} label="10% and Above" />
+                        <FormControlLabel value="Highest Priced First" control={<Radio />} label="20% and Above" />
+                        <FormControlLabel value="Lowest Priced First" control={<Radio />} label="30% and Above" />
+                        <FormControlLabel value="Fastest Shipping" control={<Radio />} label="40% and Above" />
                     </RadioGroup>
                 </FormControl>
             </div>
