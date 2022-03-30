@@ -8,7 +8,7 @@ export const ProductDetail = ()=>{
     const [data,setData] = useState({});
     const {id} = useParams();
     useEffect(()=>{
-        axios.get(`https://pepperfrybackend.herokuapp.com/armschair/${id}`).then((e)=>{
+        axios.get(`https://pepperfrybackend.herokuapp.com/armschair/armschair:${id}`).then((e)=>{
             setData(e.data);
             console.log(e.data);
         });

@@ -1,8 +1,28 @@
 .left{
     border:1px red solid;
     width: 30%;
+    margin: 1%;
   }
   .right{
     border:1px red solid;
     width: 60%;
+    margin: 1%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 350px;
+        grid-gap: 20px;
+        padding: 20px;
+  }
+  img{
+      width: 70%;
+  }
+  .main
+  {
+      border: 2px teal solid;
+        display: flex;
+        
+  }
+  .chair{
+      border: 1px grey solid;
+      margin:1%;
   }

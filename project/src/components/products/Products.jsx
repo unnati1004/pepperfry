@@ -2,6 +2,12 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Products.css"
+import * as React from 'react';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 // import styled from "styled-components";
 export const Products = () => {
 
@@ -15,48 +21,41 @@ export const Products = () => {
     }, []);
 
     return (
-        
-        <div>
+
+        <div className="main">
             <div className="left">
-                <div >
-                    <div className="radio">
-                        <label>
-                            <input
-                                type="radio"
-                                value=""
-                                // checked={}
-                                // onChange={}
-                            />
-                            Male
-                        </label>
-                    </div>
-                    <div className="radio">
-                        <label>
-                            <input
-                                type="radio"
-                                value=""
-                                // checked={}
-                                // onChange={}
-                            />
-                            Female
-                        </label>
-                    </div>
-                    <div className="radio">
-                        <label>
-                            <input
-                                type="radio"
-                                value=""
-                                // checked={}
-                                // onChange={}
-                            />
-                            Other
-                        </label>
-                    </div>
-                </div>
-                <div>
+                <FormControl>
+                    <FormLabel id="demo-radio-buttons-group-label">Sort by</FormLabel>
+                    <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="female"
+                        name="radio-buttons-group"
+                    >
+                        <FormControlLabel value="Relevance" control={<Radio />} label="Relevance" />
+                        <FormControlLabel value="Highest Priced First" control={<Radio />} label="Highest Priced First" />
+                        <FormControlLabel value="Lowest Priced First" control={<Radio />} label="Lowest Priced First" />
+                        <FormControlLabel value="Fastest Shipping" control={<Radio />} label="Fastest Shipping" />
+                        <FormControlLabel value="Newest" control={<Radio />} label="Newest" />
+                    </RadioGroup>
+                    <br/>
+                    <FormLabel id="demo-radio-buttons-group-label">Sort by</FormLabel>
+                    <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="female"
+                        name="radio-buttons-group"
+                    >
+                        <FormControlLabel value="Relevance" control={<Radio />} label="Relevance" />
+                        <FormControlLabel value="Highest Priced First" control={<Radio />} label="Highest Priced First" />
+                        <FormControlLabel value="Lowest Priced First" control={<Radio />} label="Lowest Priced First" />
+                        <FormControlLabel value="Fastest Shipping" control={<Radio />} label="Fastest Shipping" />
+                        <FormControlLabel value="Newest" control={<Radio />} label="Newest" />
+                    </RadioGroup>
+                </FormControl>
+            </div>
+            <div className="right">
                 {data.map((e) => {
                     return (
-                        <div key={e._id} className="right">
+                        <div key={e._id} className="chair">
                             <Link to={`/armschair/:${e._id}`}>
                                 <div key={e._id}>
                                     <img src={e.image} alt="chair" />
@@ -67,8 +66,8 @@ export const Products = () => {
                     )
                 })}
                 {/* </div> */}
+
             </div>
-            </div>
-            </div>
-            )
+        </div>
+    )
 }
