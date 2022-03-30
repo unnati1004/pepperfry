@@ -9,7 +9,7 @@ export const ProductDetail = ()=>{
     useEffect(()=>{
         axios.get(`https://pepperfrybackend.herokuapp.com/armschair/${id}`).then((e)=>{
             setData(e.data);
-            console.log(e);
+            console.log(e.data);
         });
     },[id]);
 
