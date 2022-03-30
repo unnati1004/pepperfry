@@ -1,6 +1,7 @@
 import axios from "axios";
 import {useState,useEffect} from "react";
 import { useParams } from "react-router";
+import "./Productdetails.css"
 // import styled from "styled-components";
 export const ProductDetail = ()=>{
 
