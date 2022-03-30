@@ -1,5 +1,6 @@
 import axios from "axios";
 import {useState,useEffect} from "react";
+import {Link} from "react-router-dom";
 // import styled from "styled-components";
 export const Products = ()=>{
 
@@ -16,15 +17,14 @@ export const Products = ()=>{
         <div>
             {data.map((e) => {
                return (
-                   <Link to={`/bookdetails/${id}`}>
-                     <div key={e.id}>
-                <img src={e.image} alt="chair" />
-                <h3>{e.name}</h3>
-               </div>
-                   </Link>
-              
-               )
+                    <Link to={`/armschair/:${e._id}`}>
+                     <div key={e._id}>
+                       <img src={e.image} alt="chair" />
+                       <h3>{e.name}</h3>
+                    </div>
+                   </Link>     
+                    )
            })}
-        </div>
+            </div>
     )
 }
