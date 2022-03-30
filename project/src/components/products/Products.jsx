@@ -1,5 +1,11 @@
 import axios from "axios";
+import {useState,useEffect} from "react";
 
-axios.get("").then(()=>{
-    
-})
+export const Product = ()=>{
+
+    const [data,setData] = useState([]);
+
+    axios.get("https://pepperfrybackend.herokuapp.com/armschair").then((e)=>{
+        setData(e.data);
+    })
+}
