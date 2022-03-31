@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default function Footer() {
   return (
     <div className="footer">
@@ -37,6 +36,8 @@ export default function Footer() {
             </div>
             <div className="app">
             <h3>Download App</h3>
+            <img src='	https://ii1.pepperfry.com/images/web21-footer-apple-appstore-logo.png' alt='/' />
+            <img src='https://ii1.pepperfry.com/images/web21-footer-google-playstore-logo.png' alt='/' />
             </div>
         </div>
         <div className="second">
@@ -57,11 +58,27 @@ export default function Footer() {
         <div className="third">
             <div className="weaccept">
                 <h3>We accept</h3>
-                <div className="icons1"></div>
+                <div className="icons1">
+                    <img src='https://ii1.pepperfry.com/images/web21-footer-visacard-logo.png' alt='/'/>
+                    <img src='	https://ii1.pepperfry.com/images/web21-footer-mastercard-logo.png' alt='/'/>
+                    <img src='https://ii1.pepperfry.com/images/web21-footer-maestrocard-logo.png' alt='/'/>
+                    <img src='https://ii1.pepperfry.com/images/web21-footer-amexcard-logo.png' alt='/' />
+                    <img src='https://ii1.pepperfry.com/images/web21-footer-rupaycard-logo.png' alt='/' />
+                    <img src='https://ii1.pepperfry.com/images/web21-footer-dinnerscard-logo.png' alt='/'/>
+                    <img src='https://ii1.pepperfry.com/images/web21-footer-wallet-logo.png' alt='/' />
+                    <img src='	https://ii1.pepperfry.com/images/web21-footer-internet-banking-logo.png' alt='/' />
+                </div>
             </div>
             <div className="socialmedia">
                 <h3>Like what you see? You'll like us even more here</h3>
-                <div className="icons2"></div>
+                <div className="icons2">
+                    <img src='	https://ii1.pepperfry.com/images/web21-footer-facebook-logo.png' alt='/' />
+                    <img src='	https://ii1.pepperfry.com/images/web21-footer-twitter-logo.png' alt='/' />
+                    <img src='	https://ii1.pepperfry.com/images/web21-footer-youtube-logo.png' alt='/' />
+                    <img src='		https://ii1.pepperfry.com/images/web21-footer-instagram-logo.png' alt='/' />
+                    <img src='	https://ii1.pepperfry.com/images/web21-footer-linkedin-logo.png' alt='/' />
+                    <img src='	https://ii1.pepperfry.com/images/web21-footer-pinterest-logo.png' alt='/' />
+                </div>
             </div>
         </div>
         <div className="fourth">

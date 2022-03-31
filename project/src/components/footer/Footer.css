@@ -21,6 +21,7 @@
 }
 .first>div>p{
     color: darkslategray;
+    cursor: pointer;
 }
 .first>div>h3{
     font-weight:500;
@@ -41,24 +42,30 @@
 }
 .second>div>p{
     color: darkslategray;
+    cursor: pointer;
 }
 .second>div>h3{
     font-weight:500;
 }
 .third{
-    width:100%;
+    width:93%;
     height: 140px;
     background-color: rgb(243,245,247);
-    
+    border-top:1px solid gainsboro;
+    border-bottom:1px solid gainsboro;
     display: flex;
+    margin: auto;
 }
 .third>div{
-    width:43%;
+    width:50%;
     height: 100%;
     margin: auto;
-    
+    margin-left:100px;
     text-align: left;
-    display: flex;
+    
+}
+.third>div:nth-child(1){
+    margin-left:0px;
 }
 .third>div>h3{
     font-weight:500;
@@ -80,12 +87,14 @@
 }
 .fourth>div>p{
     color: darkslategray;
+    cursor: pointer;
 }
 .fourth>div:nth-child(2){
     margin-left: 545px;
 }
 .fourth>div>P{
     margin-left:20px;
+    cursor: pointer;
 }
 .fourth>div>p:nth-child(1){
     margin-left: 0px;
@@ -95,4 +104,25 @@
 }
 .icons2{
     display: flex;
+}
+.icons1>img{
+    margin-left:15px;
+    cursor: pointer;
+}
+.icons1>img:nth-child(1){
+    margin-left: 0px;
+}
+.icons2>img{
+    margin-left:25px;
+    cursor: pointer;
+}
+.icons2>img:nth-child(1){
+    margin-left: 0px;
+}
+.app>h3{
+    margin-left:5px;
+}
+.app>img{
+    margin-top:10px;
+    cursor: pointer;
 }
