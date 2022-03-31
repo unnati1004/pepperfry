@@ -8,9 +8,14 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import { styled } from '@mui/material/styles';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import Favorite from '@material-ui/icons/Favorite';
 import Checkbox from '@mui/material/Checkbox';
+import FormGroup from '@mui/material/FormGroup';
+import Switch from '@mui/material/Switch';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 // import styled from "styled-components";
 export const Products = () => {
@@ -24,9 +29,55 @@ export const Products = () => {
         });
     }, []);
 
-    return (
+    const AntSwitch = styled(Switch)(({ theme }) => ({
+        width: 28,
+        height: 16,
+        padding: 0,
+        display: 'flex',
+        '&:active': {
+          '& .MuiSwitch-thumb': {
+            width: 15,
+          },
+          '& .MuiSwitch-switchBase.Mui-checked': {
+            transform: 'translateX(9px)',
+          },
+        },
+        '& .MuiSwitch-switchBase': {
+          padding: 2,
+          '&.Mui-checked': {
+            transform: 'translateX(12px)',
+            color: '#fff',
+            '& + .MuiSwitch-track': {
+              opacity: 1,
+              backgroundColor: theme.palette.mode === 'dark' ? '#177ddc' : '#1890ff',
+            },
+          },
+        },
+        '& .MuiSwitch-thumb': {
+          boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
+          width: 12,
+          height: 12,
+          borderRadius: 6,
+          transition: theme.transitions.create(['width'], {
+            duration: 200,
+          }),
+        },
+        '& .MuiSwitch-track': {
+          borderRadius: 16 / 2,
+          opacity: 1,
+          backgroundColor:
+            theme.palette.mode === 'dark' ? 'rgba(255,255,255,.35)' : 'rgba(0,0,0,.25)',
+          boxSizing: 'border-box',
+        },
+      }));
+      
 
+
+    return (
+        <div>
+             <h1 className="font" >Cantilever Chairs</h1>
         <div className="main">
+                   
             <div className="left">
                 <FormControl>
                     <FormLabel id="demo-radio-buttons-group-label">Sort by</FormLabel>
@@ -41,9 +92,61 @@ export const Products = () => {
                         <FormControlLabel value="Fastest Shipping" control={<Radio />} label="Fastest Shipping" />
                         <FormControlLabel value="Newest" control={<Radio />} label="Newest" />
                     </RadioGroup>
-                    </FormControl>
-                  <hr />
-                  <FormControl>
+                </FormControl>
+                <hr />
+                
+                <FormLabel id="demo-radio-buttons-group-label">Brand</FormLabel>
+                <FormGroup className="check1">
+              
+                    <FormControlLabel value="DZYN Furnitures" control={<Checkbox />} label="DZYN Furnitures" />
+                    <FormControlLabel value="Luxor" control={<Checkbox />} label="Luxor" />
+                    <FormControlLabel value="Home Centre" control={<Checkbox />} label="Home Centre" />
+                    <FormControlLabel value="Adiko Systems" control={<Checkbox />} label="Adiko Systems" />
+                    <FormControlLabel value="Creative Seating System" control={<Checkbox />} label="Creative Seating System" />
+                    <FormControlLabel value="Da Urban" control={<Checkbox />} label="Da Urban" />
+                    <FormControlLabel value="EFC" control={<Checkbox />} label="EFC" />
+                    <FormControlLabel value="Furniease" control={<Checkbox />} label="Furniease" />
+                    <FormControlLabel value="Home Style" control={<Checkbox />} label="Home Style" />
+                    <FormControlLabel value="VOF" control={<Checkbox />} label="VOF" />
+                </FormGroup>
+                <hr />
+                <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
+                <FormGroup className="check1">
+
+                    <FormControlLabel value="Under ₹ 5,000" control={<Checkbox />} label="Under ₹ 5,000" />
+                    <FormControlLabel value="₹ 5,000 to ₹ 6,000" control={<Checkbox />} label="₹ 5,000 to ₹ 6,000 " />
+                    <FormControlLabel value="₹ 6,000 to ₹ 7,000" control={<Checkbox />} label="₹ 6,000 to ₹ 7,000" />
+                    <FormControlLabel value="₹ 7,000 to ₹ 10,000" control={<Checkbox />} label="₹ 7,000 to ₹ 10,000 " />
+                    <FormControlLabel value="Over ₹ 10,000" control={<Checkbox />} label="Over ₹ 10,000" />
+                    
+                </FormGroup>
+                <hr />
+                <FormControl>
+                    <FormLabel id="demo-radio-buttons-group-label">Primary Material</FormLabel>
+                    <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="female"
+                        name="radio-buttons-group"
+                    >
+                        <FormControlLabel value="Leatherette" control={<Radio />} label="Leatherette" />
+                        <FormControlLabel value="Breathable Meshe" control={<Radio />} label="Breathable Meshe" />
+                        <FormControlLabel value="Solid Wood" control={<Radio />} label="Solid Wood" />
+                    </RadioGroup>
+                </FormControl>
+                <hr />
+               
+                <FormControl>
+                    <FormLabel id="demo-radio-buttons-group-label">Arm Type</FormLabel>
+                    <RadioGroup
+                        aria-labelledby="demo-radio-buttons-group-label"
+                        defaultValue="female"
+                        name="radio-buttons-group"
+                    >
+                        <FormControlLabel value="Fixed Arm" control={<Checkbox />} label="Fixed Arm" />
+                    </RadioGroup>
+                </FormControl>
+                <hr />
+                <FormControl>
                     <FormLabel id="demo-radio-buttons-group-label">Discount</FormLabel>
                     <RadioGroup
                         aria-labelledby="demo-radio-buttons-group-label"
@@ -57,24 +160,35 @@ export const Products = () => {
                     </RadioGroup>
                 </FormControl>
                 <hr />
+                <FormGroup>
+                    <Stack direction="row" spacing={1} alignItems="center">
+                        <Typography>Off</Typography>
+                        <AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} />
+                        <Typography>On</Typography>
+                    </Stack>
+                </FormGroup>
+                <hr />
             </div>
             <div className="right">
                 {data.map((e) => {
                     return (
                         <div key={e._id} className="chair">
-                            <Link to={`/armschair/:${e._id}`}>
-                                <div key={e._id} className="overlay">
-                                    <div>
-                                    <img src={e.image} alt="chair" />
-                                    <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+                            
+                                <div  className="image">
+                                    <Link to={`/armschair/${e._id}`}> <img src={e.image} alt="chair"/> </Link>
+                                    <div className="overlay">
+                                    <Checkbox {...label} className="icon" icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
                                     </div>
-                                    <h3>{e.name}</h3>
+                                    <button className="but">Add To Cart</button>
                                 </div>
-                            </Link>
+                                <Link to={`/armschair/${e._id}`} className="link"> <p>{e.name}</p></Link>
+                                <p>{e.price}</p>    
+                            
                         </div>
                     )
                 })}
             </div>
+        </div>
         </div>
     )
 }
