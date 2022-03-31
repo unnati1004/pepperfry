@@ -1,0 +1,98 @@
+.footer{
+    width:100%;
+    height: 900px;
+    background-color: rgb(243,245,247);
+   
+}
+
+.first{
+    width:100%;
+    height: 400px;
+    background-color: rgb(243,245,247);
+    
+    display: flex;
+}
+.first>div{
+    width: 18%;
+    height: 100%;
+    
+    margin: auto;
+    text-align: left;
+}
+.first>div>p{
+    color: darkslategray;
+}
+.first>div>h3{
+    font-weight:500;
+}
+.second{
+    width:100%;
+    height: 240px;
+    background-color: rgb(243,245,247);
+    
+    display: flex;
+}
+.second>div{
+    width: 26.4%;
+    height: 100%;
+    
+    margin: auto;
+    text-align: left;
+}
+.second>div>p{
+    color: darkslategray;
+}
+.second>div>h3{
+    font-weight:500;
+}
+.third{
+    width:100%;
+    height: 140px;
+    background-color: rgb(243,245,247);
+    
+    display: flex;
+}
+.third>div{
+    width:43%;
+    height: 100%;
+    margin: auto;
+    
+    text-align: left;
+    display: flex;
+}
+.third>div>h3{
+    font-weight:500;
+}
+.fourth{
+    width:100%;
+   
+    background-color: rgb(243,245,247);
+    
+    display: flex;
+    margin-top:20px;
+}
+.fourth>div{
+    height: 100%;
+    
+    text-align: left;
+    display: flex;
+    margin-left:52px;
+}
+.fourth>div>p{
+    color: darkslategray;
+}
+.fourth>div:nth-child(2){
+    margin-left: 545px;
+}
+.fourth>div>P{
+    margin-left:20px;
+}
+.fourth>div>p:nth-child(1){
+    margin-left: 0px;
+}
+.icons1{
+    display: flex;
+}
+.icons2{
+    display: flex;
+}
