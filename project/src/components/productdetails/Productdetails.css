@@ -1,0 +1,40 @@
+@font-face {
+    font-family:  manrope_thin;
+    src: url(../../font/manrope.thin.otf);
+  }
+
+.main{
+    display: flex;
+    border: 1px solid teal;
+    column-gap: 30px;
+    height: 70%;
+    border-top: 1px solid grey;
+    margin: 2%;
+}
+.image{
+    border: 1px solid red;
+}
+.details{
+    border: 1px solid red;
+    padding: 2%;
+    height:20% ;
+}
+.font{
+    font-weight:manrope_thin ;
+    Color:grey
+}
+.made{
+    color: #ff7035;
+}
+.icon {
+    color: white;
+    /* border:black; */
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    /* right: 5%; */
+    left: 70%;
+    /* transform: translate(-50%, -50%); */
+    /* -ms-transform: translate(-50%, -50%); */
+    text-align: center;
+  }

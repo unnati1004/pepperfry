@@ -68,7 +68,7 @@ export const Products = () => {
             borderRadius: 16 / 2,
             opacity: 1,
             backgroundColor:
-                theme.palette.mode === 'dark' ? 'rgb(255, 140, 0)' : 'rgba(0,0,0,.25)',
+                theme.palette.mode === 'dark' ? 'rgb(255, 140, 0)' : 'rgb(255, 140, 0)',
             boxSizing: 'border-box',
         },
     }));
@@ -140,6 +140,7 @@ export const Products = () => {
     return (
         <div>
             <h1 className="font" >Cantilever Chairs</h1>
+            <hr />
             <div className="main">
 
                 <div className="left">
@@ -160,7 +161,7 @@ export const Products = () => {
                     <hr />
 
                     <FormLabel id="demo-radio-buttons-group-label">Brand</FormLabel>
-                    <FormGroup className="check1">
+                    <FormGroup >
 
                         <FormControlLabel value="DZYN Furnitures" control={<Checkbox />} label="DZYN Furnitures" />
                         <FormControlLabel value="Luxor" control={<Checkbox />} label="Luxor" />
@@ -175,7 +176,7 @@ export const Products = () => {
                     </FormGroup>
                     <hr />
                     <FormLabel id="demo-radio-buttons-group-label">Price</FormLabel>
-                    <FormGroup className="check1">
+                    <FormGroup>
 
                         <FormControlLabel value="Under ₹ 5,000" control={<Checkbox />} label="Under ₹ 5,000" />
                         <FormControlLabel value="₹ 5,000 to ₹ 6,000" control={<Checkbox />} label="₹ 5,000 to ₹ 6,000 " />

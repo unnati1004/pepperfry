@@ -1,4 +1,8 @@
 @font-face {
+  font-family:  manrope_regular;
+  src: url(../../font/manrope.regular.otf);
+}
+@font-face {
   font-family:  Playfair Display;
   src: url(../../font/PlayfairDisplay-Regular.ttf);
 }
@@ -6,8 +10,9 @@
 
 .left{
     /* border:1px red solid; */
-    width: 30%;
+    width: 20%;
     margin: 1%;
+    padding-left: 10%;
   }
   .right{
     /* border:1px red solid; */
@@ -18,9 +23,10 @@
         /* grid-template-rows: 350px; */
         grid-gap: 20px;
         padding: 20px;
+        border-left: 1px solid grey;
   }
   img{
-      width: 95%;
+      width: 99%;
   }
   .main
   {
@@ -55,13 +61,14 @@
   .link{
     text-decoration: none;
     color: grey;
+    font-weight:manrope_regular ;
   }
   .icon {
     color: white;
     /* border:black; */
     font-size: 100px;
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 5%;
     /* transform: translate(-50%, -50%); */
     /* -ms-transform: translate(-50%, -50%); */
@@ -90,4 +97,5 @@
   }
   .font{
     font-family: Playfair Display;
+    text-align: center;
   }

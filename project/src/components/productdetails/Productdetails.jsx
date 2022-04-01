@@ -2,6 +2,11 @@ import axios from "axios";
 import {useState,useEffect} from "react";
 import { useParams } from "react-router";
 import "./Productdetails.css"
+import Checkbox from '@mui/material/Checkbox';
+import Favorite from '@material-ui/icons/Favorite';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 // import styled from "styled-components";
 export const ProductDetail = ()=>{
 
@@ -15,9 +20,16 @@ export const ProductDetail = ()=>{
     },[id]);
 
     return (
-            <div key={data.id}>
+            <div key={data.id} className="main">
+                <div className="image">
                 <img src={data.image} alt="chair" />
-                <h3>{data.name}</h3>
+                </div>
+               <div className="details">
+               <h2 className="font">{data.name}</h2>
+               <h3 className="made">{data.made_by}</h3>
+               <h2>{data.price}</h2>
+               <Checkbox {...label} className="icon" icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+               </div>
             </div>
     )
 }

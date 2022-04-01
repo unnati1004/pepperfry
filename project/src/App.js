@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import {AllRoutes} from "./routers/Routers"
 function App() {
   return (
