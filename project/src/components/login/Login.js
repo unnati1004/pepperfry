@@ -2,6 +2,7 @@ import React from 'react'
 import Pep13 from '../images/pep13.png';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import GoogleIcon from '@mui/icons-material/Google';
+import TextField from '@mui/material/TextField';
 
 export default function Login() {
   return (
@@ -15,10 +16,10 @@ export default function Login() {
                 <div className="login-form">
                     <form className="register-form" id='register-form'>
                         <div className="form-group">
-                            <input type="text" name='mobile' id='mobile' autoComplete='off' placeholder='Email ID/Mobile Number ' />
+                        <TextField id="standard-basic" label="Name" type="text" variant="standard" color='warning' />
                         </div>
                         <div className="form-group">
-                            <input type="password" name='password' id='password' autoComplete='off' placeholder='Password' />
+                        <TextField id="standard-basic" label="Password" type="password" variant="standard" color='warning'/>
                         </div>
                         <div className="form-group form-button">
                             <input type="submit" name='login' id='login' className='form-submit' value="LOG IN" />

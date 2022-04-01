@@ -2,6 +2,7 @@ import React from 'react'
 import Pep12 from '../images/pep12.png';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import GoogleIcon from '@mui/icons-material/Google';
+import TextField from '@mui/material/TextField';
 
 export default function Signup() {
   return (
@@ -15,19 +16,20 @@ export default function Signup() {
                <div className="signup-form">
                    <form className="register-form" id='register-form'>
                        <div className="form-group">
-                           <input type="text" name='name' id='name' autoComplete='off' placeholder='Name' />
+                           {/* <input type="text" name='name' id='name' autoComplete='off' placeholder='Name' /> */}
+                           <TextField id="standard-basic" label="Name" type="text" variant="standard" color='warning' />
                        </div>
                        <div className="form-group">
-                           <input type="number" name='mobile' id='mobile' autoComplete='off' placeholder='Mobile Number' />
+                       <TextField id="standard-basic" label="Mobile Number" type="number" variant="standard" color='warning' />
                        </div>
                        <div className="form-group">
-                           <input type="email" name='email' id='email' autoComplete='off' placeholder='Email' />
+                       <TextField id="standard-basic" label="Email" type="email" variant="standard" color='warning' />
                        </div>
                        <div className="form-group">
-                           <input type="password" name='password' id='password' autoComplete='off' placeholder='Password' />
+                       <TextField id="standard-basic" label="Password" type="password" variant="standard" color='warning'/>
                        </div>
                        <div className="form-group form-button">
-                           <input type="submit" name='signup' id='signup' className='form-submit' value="REGISTER" />
+                           <input type="submit" name='signup' id='signup' className='form-submit' value="REGISTER"/>
                        </div>
                    </form>
                    <p>By registering you agree to our Terms & Conditions</p>
