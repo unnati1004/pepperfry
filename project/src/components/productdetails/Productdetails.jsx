@@ -28,7 +28,13 @@ export const ProductDetail = ()=>{
                <h2 className="font">{data.name}</h2>
                <h3 className="made">{data.made_by}</h3>
                <h2>{data.price}</h2>
+               <div>
                <Checkbox {...label} className="icon" icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+               </div>
+               </div>
+               <div>
+                   <button>ADD TO CART</button>
+                   <button>BUY NOW</button>
                </div>
             </div>
     )

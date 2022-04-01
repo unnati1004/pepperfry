@@ -19,6 +19,10 @@
     padding: 2%;
     height:20% ;
 }
+.details>div{
+    display: flex;
+
+}
 .font{
     font-weight:manrope_thin ;
     Color:grey
