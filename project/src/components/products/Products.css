@@ -32,7 +32,7 @@
   {
       /* border: 1px teal solid; */
         display: flex;
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
         /* height: 100vh; */
   }
   .chair{
