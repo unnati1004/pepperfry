@@ -19,7 +19,7 @@
 .details{
     /* border: 1px solid red; */
     padding: 2%;
-    width: 40%;
+    width: 60%;
     /* height:0% ; */
     /* display: flex; */
     /* flex-direction: column; */
@@ -71,17 +71,15 @@
       background-color: white;
       color: black;
   }
-  .tag{
-      width: 20%;
-  }
+ 
   .low{
+      /* border: 1px solid red; */
       display: flex;
        padding-left: 3%;
        padding-right: 3%;
-      
   }
   .low1{
-      padding: 1%;
+      padding: 0.5%;
   }
   .heart{
       /* border: 1px solid blue; */
@@ -104,3 +102,10 @@
   .describe>div{
       justify-content: space-between;
   }
+  .img2{
+      width: 99%;
+  }
+  .img_div{
+        width: 100%;
+  }
+  

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+// import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import "./Products.css"
 import * as React from 'react';
@@ -16,20 +17,30 @@ import FormGroup from '@mui/material/FormGroup';
 import Switch from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import {  alpha, Box } from '@mui/system';
+import { alpha, Box } from '@mui/system';
 import SliderUnstyled from '@mui/base/SliderUnstyled';
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 // import styled from "styled-components";
+
+
 export const Products = () => {
 
     const [data, setData] = useState([]);
-
     useEffect(() => {
         axios.get("https://pepperfrybackend.herokuapp.com/armschair").then((e) => {
             setData(e.data);
             console.log(e.data);
         });
     }, []);
+
+    const Handleitem = (id) => {
+        axios.get(`https://pepperfrybackend.herokuapp.com/armschair/${id}`).then(({ data }) => {
+            let item1 = JSON.parse(localStorage.getItem("product")) || [];
+            item1.push(data);
+            localStorage.setItem("product", JSON.stringify(item1))
+        });
+    }
+
 
     const AntSwitch = styled(Switch)(({ theme }) => ({
         width: 28,
@@ -122,20 +133,20 @@ export const Products = () => {
           :hover,
           &.Mui-focusVisible {
             box-shadow: 0 0 0 0.25rem ${alpha(
-              theme.palette.mode === 'light' ? '#1976d2' : '#90caf9',
-              0.15,
-            )};
+            theme.palette.mode === 'light' ? '#1976d2' : '#90caf9',
+            0.15,
+        )};
           }
       
           &.Mui-active {
             box-shadow: 0 0 0 0.25rem ${alpha(
-              theme.palette.mode === 'light' ? '#1976d2' : '#90caf9',
-              0.3,
-            )};
+            theme.palette.mode === 'light' ? '#1976d2' : '#90caf9',
+            0.3,
+        )};
           }
         }
       `,
-      );
+    );
 
     return (
         <div>
@@ -242,17 +253,18 @@ export const Products = () => {
                     {data.map((e) => {
                         return (
                             <div key={e._id} className="chair">
-
                                 <div className="image">
-                                    <Link to={`/armschair/${e._id}`}> <img src={e.image} alt="chair" /> </Link>
+                                    <Link to={`/armschair/${e._id}`}> <img className="img1" src={e.image} alt="chair" /> </Link>
                                     <div className="overlay">
                                         <Checkbox {...label} className="icon" icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
                                     </div>
-                                    <button className="but">Add To Cart</button>
+                                    <button className="but" onClick={() => {
+                                        Handleitem(e._id)
+                                    }}>Add To Cart</button>
                                 </div>
                                 <Link to={`/armschair/${e._id}`} className="link"> <p>{e.name}</p></Link>
-                                <p>{e.price}</p>
-
+                                <p>{e.made_by}</p>
+                                <h3 className="price">{e.price}</h3>
                             </div>
                         )
                     })}

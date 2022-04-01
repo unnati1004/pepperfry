@@ -20,17 +20,23 @@ export const ProductDetail = () => {
             // console.log(e.data);
         });
     }, [id]);
-
-
     useEffect(() => {
         axios.get("https://pepperfrybackend.herokuapp.com/armschair").then((e) => {
             setData1(e.data);
             console.log(e.data);
         });
     }, []);
+    const Handleitem = () => {
+        // console.log(id1);
+        axios.get(`https://pepperfrybackend.herokuapp.com/armschair/${id}`).then(({ data }) => {
+            let item1 = JSON.parse(localStorage.getItem("product")) || [];
+            item1.push(data);
+            localStorage.setItem("product", JSON.stringify(item1))
+        });
+    }
     return (
         <div>
-            <div key={data.id} className="main">
+            <div  className="main">
                 <div className="image">
                     <img src={data.image} alt="chair" />
                 </div>
@@ -59,14 +65,17 @@ export const ProductDetail = () => {
                      <p>Save ₹ 7,617 MRP ₹ 18,499 (Inc of all taxes)</p>
                     <p>EMI Starting ₹ 513 view options</p>
 
-                    <img src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_28032022_nd.jpg" alt="" />
+                    <img  className="img2" src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_28032022_nd.jpg" alt="" />
                     <div>
                         <select id="cars">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
-                        <button id="add" className="cart">ADD TO CART</button>
+                        <button id="add" className="cart" onClick={()=>{
+                            // console.log(data.id)
+                            Handleitem()
+                        }}>ADD TO CART</button>
                         <button id="buy" className="cart">BUY NOW </button>
 
                     </div>
@@ -85,9 +94,7 @@ export const ProductDetail = () => {
                     </div>
                 </div>
                 </div>
-                
             </div>
-
             <div className="dum">
                     <h2>More Cantilever Chairs</h2>
                     <h3 className="view">view all</h3>
@@ -95,16 +102,14 @@ export const ProductDetail = () => {
             <div className="low">
                 {
                     data1.map((e) => {
-                        return <div key={e.id} className="low1">
-                            <img src={e.image} alt="" />
+                        return <div key={String(e.id)} className="low1">
+                            <img className="img_div"  src={e.image} alt="" />
                             <p>{e.name}</p>
                             <p>{e.price}</p>
                         </div>
                     })
                 }
             </div>
-
         </div>
-
     )
 }
