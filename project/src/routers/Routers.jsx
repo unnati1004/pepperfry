@@ -13,8 +13,8 @@ export const AllRoutes = () => {
       <Navbar/>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route exact path="/product" element={<Products />} />
-        <Route exact path="/product/:id" element={<ProductDetail />} />
+        <Route exact path="/armschair" element={<Products />} />
+        <Route exact path="/armschair/:id" element={<ProductDetail />} />
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/billing" element={<Billing />} />
         <Route exact path="/payment" element={<Payment />} />

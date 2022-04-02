@@ -119,7 +119,7 @@ export const Navbar = () => {
        <div id="divcol" className="dowp1">
            <p>Arm Chairs</p>
            <p>Rocking Chairs</p>
-           <Link id="link" to={'/product'}><p>Cantilever Chairs</p></Link>
+           <Link id="link" to={'/armschair'}><p>Cantilever Chairs</p></Link>
            <p>Folding Chairs</p>
            <p>Iconic Chairs</p>
            <p>Cafe Chairs</p>
@@ -175,7 +175,7 @@ export const Navbar = () => {
        <div id="divcol" className="dowp1">
            <p>3 Seater Sofas</p>
            <p>2 Seater Sofas</p>
-           <Link id="link" to={'/product'}><p>1 Seater Sofas</p></Link>
+           <Link id="link" to={'/armschair'}><p>1 Seater Sofas</p></Link>
            <p>Sectional Sofas</p>
            <p>Sofa Sets</p>
            <p>1 Seater Recliners</p>

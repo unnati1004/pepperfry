@@ -27,14 +27,14 @@ export const Products = () => {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get("https://pepperfrybackend.herokuapp.com/product").then((e) => {
+        axios.get("https://pepperfrybackend.herokuapp.com/armschair").then((e) => {
             setData(e.data);
             console.log(e.data);
         });
     }, []);
 
     const Handleitem = (id) => {
-        axios.get(`https://pepperfrybackend.herokuapp.com/product/${id}`).then(({ data }) => {
+        axios.get(`https://pepperfrybackend.herokuapp.com/armschair/${id}`).then(({ data }) => {
             let item1 = JSON.parse(localStorage.getItem("product")) || [];
             item1.push(data);
     
