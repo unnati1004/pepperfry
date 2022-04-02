@@ -1,0 +1,107 @@
+* {
+    font-family: sans-serif;
+    color: rgb(85, 79, 79);
+}
+
+#left {
+    width: 57%;
+    display: inline-block;
+    margin-left: -40%;
+}
+
+.container {
+    background-color: rgb(235, 229, 229);
+    height: auto;
+    margin-bottom: .5rem;
+    padding: .4rem;
+}
+
+.container .box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.start p {
+    text-align: start;
+}
+
+#payment {
+    margin-bottom: 0px;
+    background-color: white;
+    font-weight: bolder;
+    border: 1px solid grey;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#select {
+    background-color: white;
+    text-align: start;
+    padding: 0.4rem;
+}
+
+#border {
+    border: 1px solid grey;
+}
+
+#options>p {
+    height: 30px;
+    text-align: center;
+    width: auto;
+    background-color: rgb(218, 210, 210);
+    margin-bottom: -11px;
+    padding: 0.4em;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#options>p:hover {
+    background-color: black;
+    color:ghostwhite;
+    transition: 0.4s;
+}
+
+#note {
+    font-size: small;
+}
+
+#choose {
+    font-weight: bolder;
+}
+
+#btn {
+    background-color: orange;
+    border-style: none;
+    width: 150px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+#right {
+    display: inline-block;
+    width: 37%;
+    position: absolute;
+    margin-left: .3%;
+    border: 1px solid grey;
+}
+
+.rcontainer {
+    background-color: white;
+    height: auto;
+    margin-bottom: -2rem;
+    padding: .4rem;
+}
+
+.rcontainer .rbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.green {
+    color: rgb(76, 194, 76);
+}
