@@ -15,20 +15,20 @@ export const ProductDetail = () => {
     const [data, setData] = useState({});
     const { id } = useParams();
     useEffect(() => {
-        axios.get(`https://pepperfrybackend.herokuapp.com/armschair/${id}`).then((e) => {
+        axios.get(`https://pepperfrybackend.herokuapp.com/product/${id}`).then((e) => {
             setData(e.data);
             // console.log(e.data);
         });
     }, [id]);
     useEffect(() => {
-        axios.get("https://pepperfrybackend.herokuapp.com/armschair").then((e) => {
+        axios.get("https://pepperfrybackend.herokuapp.com/product").then((e) => {
             setData1(e.data);
             console.log(e.data);
         });
     }, []);
     const Handleitem = () => {
         // console.log(id1);
-        axios.get(`https://pepperfrybackend.herokuapp.com/armschair/${id}`).then(({ data }) => {
+        axios.get(`https://pepperfrybackend.herokuapp.com/product/${id}`).then(({ data }) => {
             let item1 = JSON.parse(localStorage.getItem("product")) || [];
             item1.push(data);
             localStorage.setItem("product", JSON.stringify(item1))
