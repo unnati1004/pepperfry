@@ -4,10 +4,10 @@
 }
 
 #left {
-  width: 57%;
+  margin-top: 0.5%;
+  width: 52%;
   display: inline-block;
-  margin-left: -40%;
-
+  margin-left: -37%;
 }
 
 .container {
@@ -17,7 +17,7 @@
   padding: 0.4rem;
 }
 
-.container.box {
+.container .box {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -83,8 +83,9 @@
 }
 
 #right {
+  margin-top: 0.5%;
   display: inline-block;
-  width: 37%;
+  width: 36.5%;
   position: absolute;
   margin-left: 0.3%;
   border: 1px solid grey;
@@ -97,7 +98,7 @@
   padding: 0.4rem;
 }
 
-.rcontainer.rbox {
+.rcontainer .rbox {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
