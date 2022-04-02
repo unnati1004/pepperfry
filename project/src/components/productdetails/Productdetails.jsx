@@ -101,6 +101,7 @@ export const ProductDetail = () => {
                 </div>
             <div className="low">
                 {
+                    
                     data1.map((e) => {
                         return <div key={String(e.id)} className="low1">
                             <img className="img_div"  src={e.image} alt="" />
