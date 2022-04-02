@@ -4,6 +4,7 @@ import { ProductDetail } from "../components/productdetails/Productdetails";
 import Cart from "../components/cart/Cart";
 import Billing from "../components/cart/Billing";
 import { Payment } from "../components/payment/Payment";
+import Signup from './components/signup/Signup';
 export const AllRoutes = () => {
   return (
     <>
@@ -14,6 +15,7 @@ export const AllRoutes = () => {
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/billing" element={<Billing />} />
         <Route exact path="/payment" element={<Payment />} />
+        <Route exact path="/signup" element={<Signup />} />
       </Routes>
     </>
   );
