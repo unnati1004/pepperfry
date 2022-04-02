@@ -2,7 +2,6 @@
 // import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import  Billing  from "./components/cart/Billing";
-
 import Cart from './components/cart/Cart';
 
 
