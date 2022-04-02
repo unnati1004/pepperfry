@@ -11,10 +11,10 @@
   }
   #navbar1 {
       margin: auto;
-      width: 98%;
-      height: 7.5vh;
-      align-items: center;
-      /* margin-top: 12px; */
+      width: 90%;
+      height: auto;
+    align-items: center;
+    margin-top: 12px;
       display: flex;
       justify-content: space-between;
       background-color: white;
@@ -27,7 +27,6 @@
       width: 12%;
       height: 7.5vh;
       /* border: 1px solid red; */
-      margin-bottom: 4%;
     }
     #inps {
       width: 73%;
@@ -39,7 +38,6 @@
       color: grey;
       font-weight: 500;
       padding-left: 1%;
-      margin-left: 2%
     }
     .searchb {
        /* border:1px solid grey; */
