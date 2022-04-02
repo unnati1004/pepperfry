@@ -1,10 +1,10 @@
 // import logo from './logo.svg';
 // import './App.css';
-import {AllRoutes} from "./routers/Routers"
+import { AllRoutes } from "./routers/Routers"
 function App() {
   return (
     <div className="App">
-      <AllRoutes/>
+      <AllRoutes />
     </div>
   );
 }
