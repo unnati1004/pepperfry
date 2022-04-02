@@ -3,14 +3,14 @@ export const reducer = (state,action)=>{
         return {
             ...state,
             items:state.items.filter((currele)=>{
-              return currele.id !== action.payload
+              return currele._id !== action.payload
             })
         }
     }
 
     if(action.type==="INCREMENT"){
         const updatedCart = state.items.map((currele)=>{
-            if(currele.id===action.payload){
+            if(currele._id===action.payload){
                 return {...currele,quantity:currele.quantity+1}
             }
             return currele;
@@ -21,7 +21,7 @@ export const reducer = (state,action)=>{
 
     if(action.type==="DECREMENT"){
         const updatedCart = state.items.map((currele)=>{
-            if(currele.id===action.payload){
+            if(currele._id===action.payload){
                 return {...currele,quantity:currele.quantity-1}
             }
         

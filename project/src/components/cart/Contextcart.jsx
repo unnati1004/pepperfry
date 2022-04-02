@@ -8,10 +8,12 @@ import { Link } from 'react-router-dom';
 
 
 function Contextcart() {
-
+    const {items,totalItem,totalAmount,carttotal} = useContext(CartContext);
+        localStorage.setItem("order", JSON.stringify({totalAmount,carttotal}))
+        // var place = JSON.parse(localStorage.getItem("order"))||[];
+        // console.log(place);
+    
    
-
-    const {items,totalItem,totalAmount,carttotal} = useContext(CartContext)
   return (
     <>
         <header>
@@ -50,7 +52,7 @@ function Contextcart() {
                         {/* <Scrollbars> */}
                         {
                                 items.map((e)=>{
-                                    return <Items key={e.id} {...e}/>
+                                    return <Items key={e._id} {...e}/>
                                 })
                             }
                            {/* </Scrollbars>     */}
@@ -82,16 +84,14 @@ function Contextcart() {
                                  Claim Tax Credit By Entering Your Companies GSTIN.</span>
                                  <br />
                                  <Link to="/billing">
-                            <button>PLACE ORDER</button>
+                            <button >PLACE ORDER</button>
                             </Link>
                             
                         </div>
                     </div>
                 </div>
             </section>
-
     </>
   )
 }
-
 export default Contextcart

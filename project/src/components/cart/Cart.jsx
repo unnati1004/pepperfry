@@ -20,26 +20,26 @@ console.log(product1);
 
     const [state,dispatch] = useReducer(reducer,init_state);
 
-    const removeItems = (id) =>{
+    const removeItems = (_id) =>{
         return dispatch({
             type:"REMOVE_ITEMS",
-            payload:id,
+            payload:_id,
 
         })
 
     }
 
-    const increment = (id)=>{
+    const increment = (_id)=>{
         return dispatch({
             type:"INCREMENT",
-            payload:id,
+            payload:_id,
         })
     }
 
-    const decrement = (id)=>{
+    const decrement = (_id)=>{
         return dispatch({
             type:"DECREMENT",
-            payload:id,
+            payload:_id,
         })
     }
 

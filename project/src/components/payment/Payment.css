@@ -7,6 +7,7 @@
   width: 57%;
   display: inline-block;
   margin-left: -40%;
+
 }
 
 .container {
@@ -82,7 +83,7 @@
 }
 
 #right {
-  display: inline - block;
+  display: inline-block;
   width: 37%;
   position: absolute;
   margin-left: 0.3%;

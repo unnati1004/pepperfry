@@ -1,10 +1,12 @@
-import "./billing.css"
+import { Link } from "react-router-dom";
+import "./billing.css";
+
 
 
 
 const Billing =()=>{
 
-   
+    var place = JSON.parse(localStorage.getItem("order"))||[];
     return <>
     <header>
         <div className="bill">
@@ -105,18 +107,18 @@ const Billing =()=>{
                     <span className="spp">--------------------</span>
                     <button className="namee">India</button>
                     <br /><br />
-                    
-                    <button className="save">SAVE & CONTINUE</button>
-
+                    <Link to="/payment">
+                      <button className="save">SAVE & CONTINUE</button>
+                      </Link>  
                     </div>
             </div>
             <div className="total">
-            <p>Cart value --- <span>₹ </span></p>
+            <p>Cart value --- <span>₹{place.carttotal} </span></p>
                             <p>Retails Discount --- <span>(-)₹ 5,453</span></p>
                             <p>Give India --- <span>₹ 99</span></p>
                             <p>Delivery & Assembly Charges Extra. Enter Pincode To Know</p>
                             <hr />
-                            <h4>Total---<span>₹ </span></h4> 
+                            <h4>Total---<span>₹ {place.totalAmount} </span></h4> 
             </div>
         </div>
     </section>
