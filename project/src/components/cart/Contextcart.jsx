@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Scrollbars } from "react-custom-scrollbars"
+// import { Scrollbars } from "react-custom-scrollbars"
 import Items from "./Items"
 import { CartContext } from './Cart';
 import { Link } from 'react-router-dom';
@@ -47,13 +47,13 @@ function Contextcart() {
                         </div>
 
                         <div >
-                        <Scrollbars>
+                        {/* <Scrollbars> */}
                         {
                                 items.map((e)=>{
                                     return <Items key={e.id} {...e}/>
                                 })
                             }
-                           </Scrollbars>    
+                           {/* </Scrollbars>     */}
                         </div>
                     </div>
                     <div className="login">

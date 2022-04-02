@@ -9,7 +9,7 @@ import { reducer } from "./reducer"
  export const CartContext = createContext();
 
 
-//  let item1 = JSON.parse(localStorage.getItem("product")) || [];
+ var product = JSON.parse(localStorage.getItem("product"));
 //             item1.push(data);
 
 
