@@ -140,7 +140,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -197,7 +197,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -253,7 +253,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -309,7 +309,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -365,7 +365,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -429,7 +429,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -493,7 +493,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -557,7 +557,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -620,7 +620,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
