@@ -3,18 +3,19 @@
     display: flex;
     justify-content: space-between;
     height: 60vh;
+    align-items: center;
     margin: auto;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 #large{
-    width: 74.4%;
+    width: 74%;
     height: 60vh;
-    /* border: 1px solid green; */
+    border: 1px solid green;
 }
 #small{
     width: 25%;
     height: 60vh;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
 }
 .imgtop{
     width: 100%;
