@@ -1,27 +1,21 @@
 import { createContext, useEffect, useReducer } from "react"
 import "./Cart.css"
-import { products } from "./products"
+// import { products } from "./products"
 import Contextcart from "./Contextcart"
 import { reducer } from "./reducer"
 
 
 
  export const CartContext = createContext();
-
-
- var product = JSON.parse(localStorage.getItem("product"));
+ var product1 = JSON.parse(localStorage.getItem("product"));
 //             item1.push(data);
-
-
-
+console.log(product1);
  const init_state = {
-     items:products,
+     items:product1,
      totalAmount:0,
      totalItem:0,
      carttotal:0,
-
  }
-
  const Cart=()=>{
 
     const [state,dispatch] = useReducer(reducer,init_state);

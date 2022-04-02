@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { CartContext } from "./Cart"
 import "./Cart.css"
 
-const Items = ({id,title,creator,price,img,quantity}) =>{
+const Items = ({id,title,creator,price,image,quantity}) =>{
 
     const {removeItems,increment,decrement} = useContext(CartContext)
 
@@ -12,7 +12,7 @@ const Items = ({id,title,creator,price,img,quantity}) =>{
         
         <div className="Items">
            <div className="product-img">
-               <img src={img} alt="err"/>
+               <img src={image} alt="err"/>
            </div>
            
 
