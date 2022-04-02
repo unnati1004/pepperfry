@@ -44,7 +44,7 @@ export const ProductDetail = () => {
                     <div className="main_div">
                         <div>
                             <h3 className="font1">{data.name}</h3>
-                            <h3 className="made">{data.made_by}</h3>
+                            <h3 className="made">{data.creator}</h3>
                         </div>
                         <div className="heart">
                             <Checkbox {...label} className="icon" icon={<FavoriteBorder />} checkedIcon={<Favorite />} />

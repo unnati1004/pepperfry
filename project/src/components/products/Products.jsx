@@ -263,7 +263,7 @@ export const Products = () => {
                                     }}>Add To Cart</button>
                                 </div>
                                 <Link to={`/armschair/${e._id}`} className="link"> <p>{e.name}</p></Link>
-                                <p>{e.made_by}</p>
+                                <p>{e.creator}</p>
                                 <h3 className="price">{e.price}</h3>
                             </div>
                         )
