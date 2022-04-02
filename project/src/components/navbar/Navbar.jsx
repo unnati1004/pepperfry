@@ -49,7 +49,7 @@ export const Navbar = () => {
 
          <div id="navbar"> 
          <div id="navbar1">
-       <img className="mlogo" src="https://techstory.in/wp-content/uploads/2018/03/Pepperfry.png" alt="" srcset="" />
+      <Link to="/"> <img className="mlogo" src="https://techstory.in/wp-content/uploads/2018/03/Pepperfry.png" alt="" srcset="" /></Link> 
         
          <input id="inps"  type="text" placeholder="Your door to happiness opens with a search" />
 
