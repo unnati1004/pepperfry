@@ -37,6 +37,7 @@ export const Products = () => {
         axios.get(`https://pepperfrybackend.herokuapp.com/armschair/${id}`).then(({ data }) => {
             let item1 = JSON.parse(localStorage.getItem("product")) || [];
             item1.push(data);
+    
             localStorage.setItem("product", JSON.stringify(item1))
         });
     }
