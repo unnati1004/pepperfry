@@ -3,7 +3,7 @@ import Pep12 from '../images/pep12.png';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import GoogleIcon from '@mui/icons-material/Google';
 import TextField from '@mui/material/TextField';
-
+import "./Signup.css"
 export default function Signup() {
   return (
    <>
