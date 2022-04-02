@@ -105,7 +105,7 @@ export const ProductDetail = () => {
                         return <div key={String(e.id)} className="low1">
                             <img className="img_div"  src={e.image} alt="" />
                             <p>{e.name}</p>
-                            <p>{e.price}</p>
+                            <h3 className="price1">{e.price}</h3>
                         </div>
                     })
                 }
