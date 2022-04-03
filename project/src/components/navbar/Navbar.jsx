@@ -62,7 +62,7 @@ export const Navbar = () => {
          </div>
          </Link>
       
-         <Link to= "/">
+         <Link to= "/register">
          <div className="navprofile">     
          <PersonOutlineRounded style={{color:"black"}}   />
         

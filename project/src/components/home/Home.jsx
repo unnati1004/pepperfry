@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+import Footer from "../footer/Footer";
 import "./Home.css";
+
+
 export const Home=()=>{
 const [slideData, setSlide]= useState(-1);
 const [slideData1, setSlide1]= useState(-1);
@@ -33,7 +36,8 @@ useEffect(()=>{
  },[])
 // console.log(slideData)
     return(
-     <div>
+        <div>
+                <div>
      <div id="upperdiv">
       <div id="large">
        <img className="imgtop" src={arr[slideData]} alt="" />
@@ -126,6 +130,10 @@ useEffect(()=>{
              <img src="https://ii3.pepperfry.com/media/wysiwyg/banners/Modular_Block_Web_2X_04032022.jpg" alt="" />
          </div>
      </div>
-     </div>   
+     
+     </div>  
+     <Footer/>
+        </div>
+  
     )
 }

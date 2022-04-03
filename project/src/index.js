@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import {Provider} from "react-redux";
-import {store} from "./components/redux/store";
+// import {Provider} from "react-redux";
+// import {store} from "./components/redux/store";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
