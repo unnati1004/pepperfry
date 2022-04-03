@@ -182,7 +182,7 @@ if(!email.includes(".")){
                     <p>Forgot Password</p>
                 </div>
                 <div className="newdiv">
-                <div className="gotologin">  <button><Link to="/register">New to Pepperfry? Register Here</Link></button></div>
+                <div className="gotologin">  <Link to="/register"><button>New to Pepperfry? Register Here</button></Link></div>
                 <div className="loginbyg"><p>OR Continue with <span><FacebookRoundedIcon fontSize='large' type="button" onClick={handleFBSignIn}/> <GoogleIcon fontSize='large' type="button" 
                 onClick={handleGoogleSignIn}/></span></p> </div>
                 </div>
