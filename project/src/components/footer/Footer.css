@@ -1,7 +1,10 @@
 .footer{
-    width:100%;
+    width:90%;
     height: 900px;
+    margin-top:2vh;
+    margin-left: 5%;
     background-color: rgb(243,245,247);
+    border: 1px solid red;
    
 }
 
@@ -119,10 +122,17 @@
 .icons2>img:nth-child(1){
     margin-left: 0px;
 }
-.app>h3{
+.app{
+    width: 5%;
+    height: 5vh;
+    border: 1px solid red;
+}
+.app h3{
     margin-left:5px;
 }
-.app>img{
+.app img{
+    width: 100%;
+    height: 20%;
     margin-top:10px;
     cursor: pointer;
 }
