@@ -49,7 +49,7 @@ export const Navbar = () => {
 
          <div id="navbar"> 
          <div id="navbar1">
-       <img className="mlogo" src="https://techstory.in/wp-content/uploads/2018/03/Pepperfry.png" alt="" srcset="" />
+      <Link to="/"> <img className="mlogo" src="https://techstory.in/wp-content/uploads/2018/03/Pepperfry.png" alt="" srcset="" /></Link> 
         
          <input id="inps"  type="text" placeholder="Your door to happiness opens with a search" />
 
@@ -62,7 +62,7 @@ export const Navbar = () => {
          </div>
          </Link>
       
-         <Link to= "/login">
+         <Link to= "/">
          <div className="navprofile">     
          <PersonOutlineRounded style={{color:"black"}}   />
         
@@ -119,7 +119,7 @@ export const Navbar = () => {
        <div id="divcol" className="dowp1">
            <p>Arm Chairs</p>
            <p>Rocking Chairs</p>
-           <Link id="link" to={'/product'}><p>Cantilever Chairs</p></Link>
+           <Link id="link" to={'/armschair'}><p>Cantilever Chairs</p></Link>
            <p>Folding Chairs</p>
            <p>Iconic Chairs</p>
            <p>Cafe Chairs</p>
@@ -140,7 +140,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -175,7 +175,7 @@ export const Navbar = () => {
        <div id="divcol" className="dowp1">
            <p>3 Seater Sofas</p>
            <p>2 Seater Sofas</p>
-           <Link id="link" to={'/product'}><p>1 Seater Sofas</p></Link>
+           <Link id="link" to={'/armschair'}><p>1 Seater Sofas</p></Link>
            <p>Sectional Sofas</p>
            <p>Sofa Sets</p>
            <p>1 Seater Recliners</p>
@@ -197,7 +197,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -253,7 +253,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -309,7 +309,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -365,7 +365,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -429,7 +429,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -493,7 +493,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -557,7 +557,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>
@@ -620,7 +620,7 @@ export const Navbar = () => {
            <p>Sattva</p>
            <p>ValueWud</p>
            <p>Woodsworth</p>
-           <p>View All Brands ></p>
+           <p>View All Brands </p>
        </div>
        <div className="dowp2">
            <p className="lasttext">Alex Daisy</p>

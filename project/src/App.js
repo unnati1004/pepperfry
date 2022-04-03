@@ -1,12 +1,12 @@
 
 import { Routers } from './routers/Routers';
 
+import { AllRoutes } from "./routers/Routers"
 function App() {
   return (
     <div className="App">
-
-    <Routers />
-
+       {/* <Navbar/> */}
+      <AllRoutes />
     </div>
   );
 }
