@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {useHistory, Link} from 'react-router-dom';
-import { registerInitiate } from '../redux/actions';
+// import {useDispatch, useSelector} from 'react-redux';
+import {useHistory, Link,  useNavigate} from 'react-router-dom';
+// import { registerInitiate } from '../redux/actions';
 //import {AiOutlineDown} from 'react-icons/ai';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import GoogleIcon from '@mui/icons-material/Google';
 import "./Register.css";
 import Pep12 from "./images/pep12.png";
 import TextField from '@mui/material/TextField';
+//import { useNavigation } from '@react-navigation/native';
 
 const Register=()=>{
 
@@ -16,19 +17,19 @@ const Register=()=>{
     email:'',
     password:''
    });
+   let navigate = useNavigate();
+// const {currentUser} = useSelector((state) => state.user);
 
-const {currentUser} = useSelector((state) => state.user);
+// const history = useHistory();
 
-const history = useHistory();
-
-useEffect(()=>{
-  if(currentUser){
-    history.push('/');
-  }
-},[currentUser, history]);
+// useEffect(()=>{
+//   if(currentUser){
+//     history.push('/');
+//   }
+// },[currentUser, history]);
 
 
-   const dispatch = useDispatch();
+  //  const dispatch = useDispatch();
 
   const{email, mobile, password, displayName} = state;
 
@@ -37,9 +38,10 @@ useEffect(()=>{
     // if(password !== passwordConfirm){
     //   return alert("Passwords don't match");
     // }
-    dispatch (registerInitiate(email, mobile, password, displayName));
+    // dispatch (registerInitiate(email, mobile, password, displayName));
     setState({email:"", displayName: "", mobile: "", password: ""})
     alert ("You have successfully registered");
+    navigate("/")
     };
   const handleChange =(e) =>{
     let {name, value} = e.target;
@@ -47,89 +49,6 @@ useEffect(()=>{
   };
   return (
     <div>
-        {/* <div id= "register-form">
-          <form className="form-signup" onSubmit={handleSubmit}>
-            <h1 className="h3 mb-3 font-weight-normal" style={{textAlign:"center"}}>
-            Create Account
-              </h1> */}
-
-{/* <div className="form-control">
-  <div className="form-data">
-  <select style={{width:"80%"}}>
-<i className="fas fa-sign-in-alt"></i>
-<option value = "Select-Country">--Select Country--</option>
-  <option value = "India">India</option>
-  <option value = "USA">USA</option>
-  <option value = "UK">UK</option>
-  <option value = "Canada">Canada</option>
-  <option value = "America">America</option>
-    <option value = "Denmark">Denmark</option>
-      <option value = "France">France</option>
-        <option value = "Germany">Germany</option>
-          <option value = "Italy">Italy</option>
-            
-</select>
-  </div>
-</div>
-<p className='Pass-data'>You will be unable to change your country/region after your account is created</p> */}
-
-
-              {/* <input
-              type="text"
-              id="displayName"
-              className="form-control"
-              placeholder="Full Name"
-              name="displayName"
-              onChange={handleChange}
-              value={displayName}
-              required
-              /> */}
-
-              {/* <input
-              type="email"
-              id="userEmail"
-              className="form-control"
-              placeholder="Email Address"
-              name="email"
-              onChange={handleChange}
-              value={email}
-              required
-              />
-
-            <input
-              type="password"
-              id="inputPassword"
-              className="form-control"
-              placeholder="Password"
-              name="password"
-              onChange={handleChange}
-              value={password}
-              required
-              />
-
-              <input
-              type="password"
-              id="passwordConfirm"
-              className="form-control"
-              placeholder="Confirm Password"
-              name="passwordConfirm"
-              onChange={handleChange}
-              value={passwordConfirm}
-              required
-              /> */}
-              {/* <br/>
-              <p className='Pass-data'>Password must contain 6-16 characters atleast two of the following digits letters or symbols</p>
-            
-              <button className="block" type="submit">
-                Create account
-              </button>
-            <Link to="/login">
-             <i className="fas fa-angle-left"></i> Back
-              </Link> */}
-          {/* </form>
-          <br/>
-        </div> */}
-
 <section className="signup">
        <div className="container mt-5">
        <div className="signup-image">
@@ -152,12 +71,12 @@ useEffect(()=>{
                        <TextField className="standard-basic" label="Password" type="password" name="password" variant="standard" color='warning' onChange={handleChange} value={password} required/>
                        </div>
                        <div className="form-group form-button">
-                           <input type="submit" name='signup' id='signup' className='form-submit' value="REGISTER"/>
+                           <input type="submit" name='signup' id='signup' className='form-submit' value="REGISTER" />
                        </div>
                    </form>
                    <p>By registering you agree to our Terms & Conditions</p>
                </div>
-               <div className="gotologin">  <button> <Link to="/login">Exsisting User? Log In</Link></button></div>
+               <div className="gotologin"><button>  <Link to={"/login"}>Exsisting User? Log In</Link></button></div>
                <div className="loginbyg"><p>OR Continue with <span><FacebookRoundedIcon fontSize='large'/> <GoogleIcon fontSize='large'/></span></p> </div>
            </div>
        </div>

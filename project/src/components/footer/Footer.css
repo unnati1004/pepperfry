@@ -2,7 +2,7 @@
     width:100%;
     height: 900px;
     background-color: rgb(243,245,247);
-   
+   margin-top: 10vh;
 }
 
 .first{
@@ -105,11 +105,11 @@
 .icons2{
     display: flex;
 }
-.icons1>img{
+.icons1 img{
     margin-left:15px;
     cursor: pointer;
 }
-.icons1>img:nth-child(1){
+.icons1 img:nth-child(1){
     margin-left: 0px;
 }
 .icons2>img{
@@ -119,10 +119,12 @@
 .icons2>img:nth-child(1){
     margin-left: 0px;
 }
-.app>h3{
+.app h3{
     margin-left:5px;
 }
-.app>img{
+.app img{
+    width:100%;
+    height: 20%;
     margin-top:10px;
     cursor: pointer;
 }

@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {useHistory, Link} from 'react-router-dom';
-import { googleSignInInitiate, loginInitiate } from '../redux/actions';
+import React, {useState} from 'react';
+// import {useDispatch, useSelector} from 'react-redux';
+import { Link, useNavigate} from 'react-router-dom';
+// import { googleSignInInitiate, loginInitiate } from '../redux/actions';
 import Pep13 from './images/pep13.png';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import GoogleIcon from '@mui/icons-material/Google';
@@ -14,31 +14,31 @@ const Login=()=>{
   });
 
 const{email, password} = state;
+let navigate = useNavigate();
+// const {currentUser} = useSelector((state) => state.user);
 
-const {currentUser} = useSelector((state) => state.user);
+// const history = useHistory();
 
-const history = useHistory();
+// useEffect(()=>{
+//   if(currentUser){
+//     history.push('/');
+//   }
+// },[currentUser, history]);
 
-useEffect(()=>{
-  if(currentUser){
-    history.push('/');
-  }
-},[currentUser, history]);
+// const dispatch = useDispatch();
 
-const dispatch = useDispatch();
-
-const handleGoogleSignIn = () => {
-  dispatch(googleSignInInitiate());
-};
-const handleFBSignIn = () => {
-  dispatch(loginInitiate());
-};
+// const handleGoogleSignIn = () => {
+//   dispatch(googleSignInInitiate());
+// };
+// const handleFBSignIn = () => {
+//   dispatch(loginInitiate());
+// };
 
   const handleSubmit =(e) =>{
     e.preventDefault();
-    if(!email || !password){
-      return alert("Please fill in all fields");
-    }
+    // if(!email || !password){
+    //   return alert("Please fill in all fields");
+    // }
 if(password.length < 6){
   return alert("Password must be at least 6 characters");
 }
@@ -57,10 +57,10 @@ if(!email.includes(".")){
 // if(e.password !== password)
 // return alert("Please enter a valid password");
 
-
-   dispatch(loginInitiate(email, password));
+  //  dispatch(loginInitiate(email, password));
     setState({email:"", password:""});
     alert ("You have successfully logged in");
+    navigate("/");
   };
 
   const handleChange =(e) =>{
@@ -182,9 +182,8 @@ if(!email.includes(".")){
                     <p>Forgot Password</p>
                 </div>
                 <div className="newdiv">
-                <div className="gotologin">  <button><Link to="/register">New to Pepperfry? Register Here</Link></button></div>
-                <div className="loginbyg"><p>OR Continue with <span><FacebookRoundedIcon fontSize='large' type="button" onClick={handleFBSignIn}/> <GoogleIcon fontSize='large' type="button" 
-                onClick={handleGoogleSignIn}/></span></p> </div>
+                <div className="gotologin"> <button> <Link to="/register">New to Pepperfry? Register Here</Link></button></div>
+                <div className="loginbyg"><p>OR Continue with <span><FacebookRoundedIcon fontSize='large' type="button" /> <GoogleIcon fontSize='large' type="button" /></span></p> </div>
                 </div>
             </div>
         </div>
